@@ -1,0 +1,98 @@
+.box-container-pop{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: calc(100vh);
+   background-color: rgba(00,000,000,0.5);
+   z-index: 999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box-layer{
+   width: 350px;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   background-color: #ffff;
+   border-radius: 10px;
+}
+.layer-input {
+   position: relative;
+   padding: 20px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.title-notifiction{
+   width: 100%;
+   height: 30px;
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+}
+.close-btn{
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   right: 15px;
+   top: 10px;
+   background-color: blueviolet;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ffff;
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.close-btn:hover{
+   background-color: #afafaf;
+}
+.input-text-with{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1rem;
+}
+.input-text-with label{
+   font-size: 15px;
+   margin-bottom: 5px;
+}
+.input-text-with input{
+   padding: 10px;
+   border: none;
+   background-color: #edf0ff;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+.input-text-with select{
+   padding: 10px;
+   border: none;
+   background-color: #edf0ff;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+.btn-sub{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.btn-sub button{
+   padding: 0.5rem 2rem;
+   border: none;
+   border-radius:5px;
+   cursor: pointer;
+   color: #7700ff;
+   background-color: #eedfff;
+   transition: 0.3s;
+}
+.btn-sub button:hover{
+   color: #fff;
+   background-color: #49009d;
+}

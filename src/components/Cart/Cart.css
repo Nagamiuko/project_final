@@ -1,0 +1,207 @@
+.box-bg-list-mybook{
+   position: relative;
+   top:2rem;
+   width: 100%;
+   margin: 0 auto;
+   border-radius: 10px;
+   display: flex;
+   flex-flow: row;
+}
+.box-container-list-mybook{
+   position: relative;
+   width: 100%;
+}
+.title-my{
+   position: relative;
+   top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center ;
+}
+.box-contai-book{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+}
+.box-search-mybook{
+   display: flex;
+   padding: 10px 0;
+   width: 90%;
+   height: 40px;
+   flex-flow: row;
+   margin: 0 auto;
+}
+.icon-search{
+   position: absolute;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: #00e1ff;
+   color: #ffff;
+   border-radius: 5px 0 0 5px;
+}
+.box-search-mybook input{
+   padding: 10px 50px;
+   width: 100%;
+   height: 40px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   background: #eee;
+}
+.btn-list-c-book{
+   position: relative;
+   display: flex;
+   flex-flow: row;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   height: 50px;
+   margin: 0 auto;
+   border-radius: 5px;
+   margin-top: 10px;
+   margin-bottom: 15px;
+   right:5px;
+}
+.btn-list-c-book button{
+   width: 200px;
+   height: 50px;
+   border: none;
+   background: #00d0ff;
+   margin-left: 10px;
+   border-radius: 5px;
+   color:#ffff;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.btn-list-c-book button:hover{
+   background: #007792;
+}
+.border-bar-bottom{
+   position: relative;
+   margin: 0 auto;
+   width: 90%;
+   border: 1px solid #dbdbdb;
+   margin-bottom: 10px;
+}
+.list-book-box{
+   position: relative;
+   top: 15px;
+   width: 90%;
+   margin: 0 auto;
+   border-radius: 10px;
+   margin-bottom: 2rem;
+}
+.box-item{
+   position: relative;
+   padding: 10px;
+   display: flex;
+   flex-flow: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 90%;
+   height: 90px;
+   margin: 0 auto;
+   border-radius: 10px;
+   background: #eee;
+   margin-bottom: 1rem;
+}
+.box-item a{
+   color: #585858;
+   transition: 0.2s;
+}
+.box-item a:hover{
+   color: #b700ff;
+}
+.flex-le{
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   margin-left: 1rem;
+}
+.im-cover-book{
+   max-width: 60px;
+   overflow: hidden;
+}
+.im-cover-book img{
+   width: 100%;
+}
+.title-name-book{
+   position: relative;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.title-name-book p , .view-book p{
+   color: #353535dd;
+   white-space: nowrap;
+   line-height: 1;
+   text-overflow: ellipsis;
+}
+.flex-rh{
+   position: relative;
+   display: flex;
+}
+.flex-rh .d-dt-book-t{
+   display: flex;
+   flex-flow: row;
+   align-items: center;
+   margin-right: 4rem;
+}
+
+.btn-t-book{
+   width: 300px;
+   display: flex;
+   justify-content: center;
+}
+.btn-t-book button{
+   padding: 5px 10px;
+   width: 100px;
+   color: #fff;
+   background-color: #b700ff;
+   border: none;
+   cursor: pointer;
+   border-radius: 50px;
+   transition: 0.3s;
+   margin-right: 10px;
+}
+.btn-t-book .btn-pay{
+   background-color: #00af1d;
+   color: #fff;
+}
+.btn-t-book button:hover{
+   color: #fff;
+   background-color: #fa3838dd;
+}
+.btn-t-book .btn-pay:hover{
+   color: #00af1d;
+   background-color: transparent;
+   border: 1px solid #00af1d;
+}
+.top-buttom{
+   margin-bottom: 5rem;
+}
+.btn-payment button{
+   position: relative;
+   padding: 10px;
+   padding-left: 50px;
+   padding-right: 50px;
+   border-radius: 50px;
+   border: none;
+   cursor: pointer;
+   font-family: 'Kodchasan', sans-serif;
+   font-weight: 600;
+   font-size: 12px;
+}
+
+.btn-payment button:hover{
+   color: #ffff;
+   background: #19b743ee;
+}

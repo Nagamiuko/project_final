@@ -1,0 +1,203 @@
+:root{
+   --color-input-bg-solid:#c0c0c0;
+}
+.box-bg-book-cte{
+   position: relative;
+   width: 90%;
+   height: auto;
+   background: transparent;
+   left: 2rem;
+   margin-bottom: 5rem;
+}
+.box-container-book{
+   position: relative;
+   padding: 15px;
+   top: 2rem;
+   width: 100%;
+   height: auto;
+   background: #f1f7fe;
+   margin-bottom: 0.5px;
+}
+.filter-drop-container{
+   filter: drop-shadow(0 5px 5px rgba(216, 216, 216, 0.3));
+}
+.box-bg-book-cte .b-book-cor{
+   display: flex;
+   flex-flow: row;
+}
+.title-h-book{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.im-book-cover{
+   max-width: 200px;
+   height: auto;
+   border-radius: 5px;
+   overflow: hidden;
+   cursor: pointer;
+}
+.im-book-cover img:hover{
+   opacity: .5;
+   background: #000000;
+}
+.im-book-cover img{
+   width: 100%;
+   height: auto;
+   border-radius: 5px;
+}
+.row-in{
+   position: relative;
+   padding: 20px;
+   left: 1rem;
+   width: 100%;
+   display: flex;
+   flex-flow: column;
+}
+.in-dt-book{
+   position: relative;
+   width: 90%;
+   margin-bottom: 1rem;
+}
+.in-dt-book input{
+   padding: 15px;
+   width: 100%;
+   border: none;
+   border-radius: 5px;
+   outline: 1px solid var(--color-input-bg-solid);
+}
+.in-dt-namet{
+   display: flex;
+   justify-content: space-between;
+   width: 93%;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+.t-name-book{
+   width: 90%;
+}
+.t-name-book input{
+   padding: 15px;
+   width: 90%;
+   border: none;
+   border-radius: 5px;
+   outline: 1px solid var(--color-input-bg-solid);
+}
+.form-control{
+   position: relative;
+   top: 12px;
+   padding: 10px;
+   width: 50%;
+   height: 45px;
+   border-radius: 5px;
+   border: none;
+   outline: 1px solid var(--color-input-bg-solid);
+}
+.in-dt-name-a{
+   display: flex;
+   width: 93%;
+   align-items: center;
+}
+.a-name-book {
+   width: 90%;
+}
+.a-name-book input{
+   padding: 15px;
+   width: 90%;
+   border: none;
+   border-radius: 5px;
+   outline: 1px solid var(--color-input-bg-solid);
+}
+.form-t{
+   position: relative;
+   top: 12px;
+   padding: 10px;
+   width: 50%;
+   height: 45px;
+   margin-left: 15px;
+   border-radius: 5px;
+   border: none;
+   outline: 1px solid var(--color-input-bg-solid);
+}
+.box-sy-book{
+   width: 100%;
+}
+.box-sy-book textarea{
+   padding: 10px;
+   width: 98%;
+   height: 50px;
+   border: none;
+}
+.choose-t{
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+.c-b-t{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   margin-left: 3rem;
+   left: -30px;
+}
+.co{
+   display: flex;
+   flex-flow: row;
+}
+.co .flex-row{
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   left: -15px;
+}
+.flex-row input{
+   margin-left: 1rem;
+}
+.custom-control-label{
+   position: relative;
+   margin-left: 0;
+   display: flex;
+   align-items: center;
+}
+.ml-5{
+   margin-left: 5px;
+}
+.in-pice{
+   padding: 2px;
+   width: 70px;
+   border: none;
+   border-radius: 2px;
+   color: #44b900;
+   outline: none;
+   font-size: 12px;
+}
+.box-sy-book .box-label{
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   width: 98%;
+   border: none;
+   background: #c0c0c0;
+   border-radius: 5px;
+   color: white;
+}
+
+.btn-book-save{
+    position: relative;
+    display: flex;
+    justify-content:center ;
+}
+.btn-book-save button{
+   padding: 10px;
+   width: 100px;
+   border: none;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 700;
+   border-radius: 5px;
+}
+.btn-book-save button:hover{
+   color: white   ;
+   background: #44b900;
+}

@@ -1,0 +1,9 @@
+div.box-bg-lo{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.box-bg-lo img{
+   width: 100%;
+   height: 300px;
+}

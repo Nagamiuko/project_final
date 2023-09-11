@@ -1,0 +1,127 @@
+.box-v-d{
+   position:relative;
+   padding: 1rem ;
+   height: auto; 
+   background: white;
+   border-radius: 1rem;
+   box-shadow: 0 12px 15px rgba(182, 182, 182, 0.2);
+   max-width: 1000px;
+   width: 100%;
+   margin: 0 auto;
+   top: 3rem;
+   margin-bottom: 7rem;
+}
+.box-e-d-img-box {
+   max-width: 180px;
+   height: 220px;
+   background:transparent;
+   padding: 1rem;
+}
+.box-e-d-img-box img{
+   width: 100%;
+   border-radius: 5px;
+   filter: drop-shadow( 0 5px 10px rgba(128, 128, 128, 0.7));
+}
+.box-v-d-r{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: auto;
+   padding: 1rem ;
+   margin-left: 0;
+   color: rgb(0, 0, 0);
+}
+.box-e-d-menu-tool{
+   display: flex;
+   justify-content:space-between;
+   position: relative;
+   padding: 10px 0;
+   top: 4rem;
+   width: 100%;
+   height: auto;
+   background: rgba(130, 207, 255, 0.3);
+   border-radius: 5px;
+   border: none;
+}
+.view-row{
+   display: flex;
+   flex-flow: row;
+   margin-left: 10px;
+}
+.v-e{
+   color: #0800ff;
+}
+.col-list{
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   margin-left: 1.5rem;
+}
+.btn-lis-col{
+   position: relative;
+   display: flex;
+   flex-flow: column;
+   right: 3rem;
+}
+.btn-e-a{
+   display: flex;
+   flex-flow: row;
+   position: relative;
+   text-align: center;
+   width: 100%;
+}
+.btn-e{
+   position: relative;
+   padding: 5px 20px;
+   margin-bottom: 1rem;
+   margin-left: 2rem;
+   background: #0088ff;
+   border-radius: 50px;
+   border: none;
+   color: #ffffff;
+   cursor: pointer;
+}
+.btn-e:hover{
+   background: #0800ff;
+}
+.lis-ton{
+   color: #0800ff;
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+}
+.ml4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+.btn-ed-r{
+   display: flex;
+   flex-flow: row;
+}
+.recom{
+   position: relative;
+   margin-right: 1.5rem;
+   display: flex;
+}
+.btn-ed-r button{
+   position: relative;
+   padding: 5px 20px;
+   margin-right: 1rem;
+   color: #0088ff;
+   outline: 1px solid #0088ff;
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+}
+.btn-ed-r button:hover{
+   background: #0088ff;
+   color: #ffff;
+   outline: none;
+}
+.btn-ed-r .del-red:hover{
+   background: #fff;
+   color: #ff0000;
+   outline: 1px solid red;
+}

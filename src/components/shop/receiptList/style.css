@@ -1,0 +1,89 @@
+
+ .container-datail-or{
+   position: relative;
+   top: 4rem;
+   max-width: 850px;
+   margin: 0 auto;
+   background-color: #fff;
+ }
+ .container-datail-or p{
+   color: black;
+ }
+ .col-or{
+    border: 1px solid #ddd;
+    margin-bottom: 10rem;
+ }
+ .title-logo-or{
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .box-image-detail-or{
+    max-width:400px;
+    overflow: hidden;
+ }
+ .box-image-detail-or img{
+    width: 100%;
+ }
+ .row-detail-or{
+    display: flex;
+    flex-direction: row;
+ }
+ .col-flex-cols{
+    display: flex;
+    flex-direction: column;
+ }
+ .detail-title-or{
+    padding: 1.75rem;
+    display: flex; 
+    align-items: center;
+ }
+ .detail-title-or h3{
+    position: relative;
+    margin-right: 0.5rem;
+ }
+ .detail-title-or p{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #00e1ff;
+ }
+ .detail-or{
+    width: 100%;
+    position: relative;
+    top: -1.5rem;
+    padding: 1.75rem;
+ }
+ .detail-or h3{
+    font-weight: 800;
+ }
+ .border{
+    margin: 0 auto;
+    width: 90%;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+ }
+ .detail-order-or {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+ }
+ .detail-order-or p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+ }
+ .mt-10{
+    margin-top: 10px;
+ }
+ .mt-15{
+    margin-top: 15px;
+ }
+ .mt-20{
+    margin-top: 20px;
+ }
+ .mt-25{
+    margin-top: 25px;
+ }

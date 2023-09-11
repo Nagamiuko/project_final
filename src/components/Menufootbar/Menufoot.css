@@ -1,0 +1,250 @@
+div.menu-foot-bar{
+   width: 100%;
+   position: relative;
+   bottom: 0;
+   height: 50px;
+   background-color: rgb(0, 228, 253);
+   border-radius: 25px 25px 0 0;
+}
+.menu-foot-bar .menu-li {
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
+}
+.logo-book{
+   max-width: 45px;
+   height: 45px;
+   margin-left: 13rem;
+}
+.logo-book img{
+   width: 100%;
+   filter: drop-shadow( 0 5px 10px rgba(255, 255, 255, 0.9));
+}
+.menu-li ul{
+   display: flex;
+   align-items: center;
+} 
+
+.menu-li ul li{
+   position: relative;
+   margin-left: 45px;
+   list-style: none;
+   font-size: 15.5px;
+   font-weight: 700;
+   filter: drop-shadow( 0 5px 10px rgba(255, 255, 255, 1));
+}
+.menu-li li a{
+   color: white;
+   text-decoration: none;
+}
+.login-re{
+   position: relative;
+   margin-right: 13rem;
+}
+.login-re button{
+   position: relative;
+   padding: .3rem 2rem;
+   border: none;
+   color: rgb(0, 228, 253);
+   border-radius: 3px;
+   background-color: white;
+   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9);
+   cursor: pointer;
+}
+.login-re button:hover{
+   background-color: rgb(249, 249, 249);
+   color:  rgb(147, 180, 255)
+}
+div.log-s-p{
+   width: 100%;
+   height: calc(100vh - 0pc);
+   background-color: rgba(47, 47, 47, 0.5);
+   z-index:99;
+}
+
+.pro-f{
+   position: relative;
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   color: black;
+}
+
+.pro-f .font-pro{
+   position: relative;
+   width: 55px;
+   right:10px;
+   line-height: 1.5;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.menu-pop-profile{
+   position: absolute;
+   right: 13rem;
+   width: 250px;
+   height: 250px;
+   bottom: 3rem;
+   z-index: 99;
+   background: white;
+   border-radius: 10px 10px 0 0;
+   filter: drop-shadow(0 5px 5px rgba(170, 170, 170, 0.3));
+}
+.ac-up-donw{
+   animation-duration: .1s;
+   animation-name: menuprofile-up;
+   animation-timing-function: ease-in-out;
+}
+@keyframes menuprofile-up{
+   0%{
+     opacity: 0.2;
+     bottom: 1rem;
+   }
+   50%{
+     opacity: 0.5;
+     bottom: 2.5rem;
+   }
+   100%{
+     opacity: 1;
+     bottom: 3rem;
+   }
+}
+.cor-flex {
+   position: absolute;
+   bottom: 0;
+   display: flex;
+   align-items: center;
+   z-index: 99;
+   width: 100%;
+   height: 100px;
+   background:#ffffff;
+}
+.m-p{
+   position: relative;
+   left: 1rem;
+   display: flex;
+   align-items: center;
+   flex-flow: column;
+  text-align: center;
+}
+.m-m{
+   max-width: 60px;
+   height: 60px;
+   background: black;
+   border-radius: 50px;
+   overflow: hidden;
+}
+.m-m img{
+  width: 100%;
+}
+.n-a{
+   width:100px;
+   line-height: 1.5;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   color:#686868;
+}
+.a-o{
+   position: relative;
+   left:2.5rem;
+}
+.a-o button{
+   padding: 5px 10px;
+   border-radius: 100px;
+   outline: 2px solid red;
+   color: red;
+   background: transparent;
+   cursor: pointer;
+   border: none;
+   transition: .2s;
+}
+
+.a-o button:hover{
+   background: red;
+   color: white;
+}
+.b-b{
+   position: relative;
+   top: 0.5rem;
+}
+.m-i{
+   position: relative;
+   left: 2rem;
+   top: 1rem;
+   margin-left: 1rem;
+   margin-bottom: .2rem;
+}
+.m-i a{
+   color:#555555;
+   text-decoration: none;
+}
+.m-i a:hover{
+   color: #b1b1b1;
+}
+.line-b-b{
+   position: relative;
+   display: flex;
+   width: 220px;
+   left: 1rem;
+   top: 1rem;
+   border: .1px solid #e9e9e9;
+   margin-bottom: 1.5rem;
+}
+.m-i-top{
+   position: relative;
+   width: 100%;
+   height: 100px;
+   margin-bottom: -1rem;
+}
+.anime-drop-menu{
+   animation-duration: .2s;
+   animation-timing-function: ease-in-out;
+   animation-name:menupromyaccount ;
+}
+@keyframes menupromyaccount {
+   0%{
+      opacity: 0;
+      top: -10px;
+   }
+   50%{
+      opacity: 0.5;
+      top: -2px;
+   }
+   100%{
+      opacity: 1;
+      top: 0px;
+   }
+}
+.but{
+   position: relative;
+   top: -10px;
+   margin-bottom: 10px;
+   font-size: 13px;
+
+}
+.m-mei{
+   position: relative;
+   right: 20px;
+   max-width: 30px;
+   height: 30px;
+   background: black;
+   border-radius: 50px;
+   overflow: hidden;
+}
+.m-mei img{
+   width: 100%;
+}
+.p-pt small::before{
+   content: attr(data-num);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   left: 85px;
+   top: -5px;
+   width: 15px;
+   height: 15px;
+   border-radius:50% ;
+   background-color: red;
+   color: white;
+   font-size: 10px;
+}

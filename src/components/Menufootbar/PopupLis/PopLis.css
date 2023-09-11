@@ -1,0 +1,79 @@
+.box-bg-pop-r-lis{
+   position: absolute;
+   width: 200px;
+   height: 250px;
+   background: #e7e6e6;
+   right: 80px;
+   bottom: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px 10px 0 10px ;
+}
+.filter-drop{
+   filter: drop-shadow( 0 5px 10px rgba(191, 191, 191, 0.3));
+}
+.cor-r-btn-lis{
+   position: relative;
+   display: flex;
+   flex-flow: column;
+   top: 10px;
+}
+.cor-r-btn-lis small{
+   position: absolute;
+   right: -20px;
+   top: -35px;
+   background: #ff0000;
+   text-align: center;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   font-size: 10px;
+   color:  #ff0000;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.cor-r-btn-lis small:hover{
+   color:#ffffff;
+   font-weight: 600;
+}
+.cor-r-btn-lis .title-pop-r{
+   position: relative;
+   bottom: 10px;
+   text-align: center;
+}
+.line-bar{
+   width: 100%;
+   border: 1px solid #cdcdcd;
+   margin-bottom: 15px;
+}
+.cor-r-btn-lis button{
+   position: relative;
+   padding: 15px 0;
+   width: 150px;
+   border-radius: 3px;
+   margin-bottom: 30px;
+   border: none;
+   background: white;
+   cursor: pointer;
+   transition: 0.4s;
+}
+.cor-r-btn-lis button:hover{
+   color: white;
+   background: #c4c4c4;
+}
+.box-span::before{
+   content: attr(data-num);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   right:15px;
+   top: 15px;
+   width: 20px;
+   height: 20px;
+   border-radius:50% ;
+   background-color: red;
+   color: white;
+   font-size: 15px;
+}

@@ -1,0 +1,178 @@
+.box-bg-mybook{
+   position: relative;
+   top:2rem;
+   width: 100%;
+   margin: 0 auto;
+   border-radius: 10px;
+   display: flex;
+   flex-flow: row;
+}
+.box-left-menu{
+   padding: 30px 0;
+   display: flex;
+   flex-direction: column;
+   width: 20%;
+   height: auto;
+   background-color: #fff;
+   filter: drop-shadow( 0 0 10px rgba(218, 218, 218, 0.5));
+   border-radius: 10px;
+}
+.box-container-list-mybook{
+   position: relative;
+   left: 2rem;
+   width: 75%;
+   background-color: #fff;
+   filter: drop-shadow( 0 0 10px rgba(218, 218, 218, 0.5));
+   border-radius: 10px;
+}
+.title-my{
+   position: relative;
+   top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center ;
+}
+.box-contai-book{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+}
+.box-search-mybook{
+   display: flex;
+   padding: 10px 0;
+   width: 90%;
+   height: 40px;
+   flex-flow: row;
+   margin: 0 auto;
+}
+.icon-search{
+   position: absolute;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: #00e1ff;
+   color: #ffff;
+   border-radius: 5px 0 0 5px;
+}
+.box-search-mybook input{
+   padding: 10px 50px;
+   width: 100%;
+   height: 40px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   background: #eee;
+}
+.btn-list-c-book{
+   position: relative;
+   display: flex;
+   flex-flow: row;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   height: 50px;
+   margin: 0 auto;
+   border-radius: 5px;
+   margin-top: 10px;
+   margin-bottom: 15px;
+   right:5px;
+}
+.btn-list-c-book button{
+   width: 200px;
+   height: 50px;
+   border: none;
+   background: #00d0ff;
+   margin-left: 10px;
+   border-radius: 5px;
+   color:#ffff;
+   cursor: pointer;
+   transition: 0.2s;
+}
+.btn-list-c-book button:hover{
+   background: #007792;
+}
+.border-bar-bottom{
+   position: relative;
+   margin: 0 auto;
+   width: 90%;
+   border: 1px solid #dbdbdb;
+   margin-bottom: 10px;
+}
+.box-item a{
+   color: #585858;
+   transition: 0.2s;
+}
+.box-item a:hover{
+   color: #b700ff;
+}
+.flex-le{
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   margin-left: 1rem;
+}
+.flex-rh{
+   position: relative;
+   display: flex;
+}
+.flex-rh .d-dt-book-t{
+   display: flex;
+   flex-flow: row;
+   align-items: center;
+   margin-right: 4rem;
+}
+.list-book-favor{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   margin: 0 auto;
+}
+.list-flex-wrap{
+   position: relative;
+   padding-bottom: 10px;
+   left: 3rem;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   background: #ffffff;
+   border-radius: 5px;
+   filter: drop-shadow(0 5px 10px rgba(219, 219, 219, 0.5));
+   cursor: pointer;
+   transition: 0.3s;
+}
+.list-flex-wrap:hover{
+   background: #f4f4f4;
+   filter: drop-shadow(0 5px 10px rgba(219, 219, 219, 0.5));
+}
+.box-wrap{
+   position: relative;
+   padding: 10px;
+   width: 110px;
+   height: 180px;
+}
+.cover-img-box{
+   position: relative;
+   margin: 0 auto;
+   max-width: 110px;
+   overflow: hidden;
+}
+.cover-img-box img{
+   width: 100%;
+   border-radius: 5px;
+}
+.name-book{
+   width: 110px;
+   overflow: hidden;
+   line-height: 1.5;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}

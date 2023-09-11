@@ -1,0 +1,28 @@
+.menu-btn-order-send{
+   padding: 10px 0;
+   position: relative;
+   right: 0rem;
+}
+.menu-btn-order-send button{
+   background: transparent;
+   font-size: 14px;
+   border: none;
+   color: #ffff;
+   cursor: pointer;
+}
+.btn-link{
+   padding: 8px 10px;
+   margin-left: 1rem;
+   border: none;
+   color: #ffff;
+   background-color:rgba(0, 13, 255, 0.5) ;
+   border-radius: 5px;
+}
+.btn-link.active{
+   padding: 8px 10px;
+   margin-left: 1rem;
+   border: none;
+   color: #ffff;
+   background-color:rgba(1, 5, 89, 0.5) ;
+   border-radius: 5px;
+}

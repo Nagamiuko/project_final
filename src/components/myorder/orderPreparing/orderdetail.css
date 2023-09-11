@@ -1,0 +1,16 @@
+.box-container-order{
+   position: relative;
+   top: 3rem;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+.border-line-bar{
+   border: 1px solid #dddd;
+   width: 100%;
+}
+.box-contant-order{
+   position: relative;
+   top: 1rem;
+   width: 100%;
+}

@@ -1,0 +1,26 @@
+.book-pdf{
+   width: 70%;
+   margin: 0 auto;
+   margin-bottom:2rem;
+}
+.box-container-no-payment{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: calc(100vh - 150px);
+}
+.box-alert{
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #ffff;
+   border-radius: 20px;
+   filter: drop-shadow(0 0 10px rgba(199,199,199,0.4));
+}
+.box-alert h4{
+   color: #45aeffdd;
+   filter: drop-shadow(0 5px 10px rgba(104, 58, 255, 0.4));
+}

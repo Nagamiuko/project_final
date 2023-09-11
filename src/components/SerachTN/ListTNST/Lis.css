@@ -1,0 +1,45 @@
+.box-col-bg{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   left: 1rem;
+}
+.row-detail{
+   padding: 10px;
+   display: flex;
+   flex-direction: row;
+   width: 400px;
+   height: 130px;
+   background: #ffff;
+   margin-bottom: 1rem;
+   margin-left: 1rem;
+   border-radius: 15px;
+   cursor: pointer;
+}
+.img-bok{
+   display: block;
+   max-width: 100px;
+   overflow: hidden;
+}
+.img-bok img{
+   width: 100%;
+   border-radius: 10px;
+}
+.detail-toon{
+   display: flex;
+   flex-flow: column;
+   left: 1rem;
+   width: 100%;
+}
+.title-n-b{
+   padding: 2px;
+   position: relative;
+   left: 10px;
+   width: 300px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.title-n-b .flex-n{
+   top: 2px;
+}
