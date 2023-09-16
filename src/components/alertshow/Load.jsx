@@ -3,11 +3,6 @@ import "./SW.css";
 import {Oval} from 'react-loader-spinner'
 import { useNavigate } from "react-router-dom";
 const Load = () => {
-  const navigator = useNavigate()
-  const refa = () =>{
-     navigator(0)
-  }
-   refa()
   return (
     <>
       <div className="box-l-load">
