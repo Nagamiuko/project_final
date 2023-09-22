@@ -23,9 +23,8 @@ import { RotatingLines } from "react-loader-spinner";
 import Withdraw from "../withdraw/Withdraw";
 import axios from "axios";
 import config from "../../../config.json";
-import { getCreditOfUser } from "../../redux/action/user";
-
-
+import { getCreditOfUser, getWithdramAllOfUser } from "../../redux/action/user";
+import { toast } from "react-toastify";
 const ProductIncomeAll = () => {
   const navigator = useNavigate();
   const [openWihdraw, setOpenWihraw] = useState(false);
@@ -33,32 +32,45 @@ const ProductIncomeAll = () => {
   const [dataprice, setDataPrice] = useState(null);
   const { orderoneshop } = useSelector((state) => state.order);
   const { users } = useSelector((state) => state.user);
+  const { userWithdram } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const [monney, setMonney] = useState(users && users.credit);
+  const [monney_total, setMonneyTaotal] = useState(0);
 
   const totalPriceBook =
     dataprice && dataprice.reduce((acc, item) => acc + item.totalPrice, 0);
+  const totalWithCredit =
+    userWithdram && userWithdram.reduce((ac, item) => ac + item.moneyTotal, 0);
   const serviceCharge = totalPriceBook * 0.1;
-  const availablePrice = totalPriceBook - serviceCharge.toFixed(2);
-
+  const total = totalPriceBook - serviceCharge.toFixed(2);
+  let availablePrice = total - totalWithCredit;
+  console.log(availablePrice);
   useEffect(() => {
     dispatch(getOrdersAllOfShop(user._id));
-    dispatch(getCreditOfUser(user._id))
+    dispatch(getCreditOfUser(user._id));
+    dispatch(getWithdramAllOfUser(user._id));
     const orderData =
       orderoneshop &&
       orderoneshop.filter((item) => item.status === "Delivered");
     setDataPrice(orderData);
-    const UpdateCredit = async () => {
-      try {
-        await axios.put(`${config.apiUserUpdateCredit}/${user._id}`, {
-          availablePrice: availablePrice,
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    UpdateCredit();
-  }, [dispatch, user._id,availablePrice]);
+  }, [dispatch, user._id]);
 
+  const UpdateCredit = async (totalPrice, total) => {
+    try {
+      if(totalPrice > 0){
+        await axios.put(`${config.apiUserUpdateCredit}/${user._id}`, {
+          availablePrice: totalPrice,
+          totalMonneyShop: total,
+        });
+      }else{
+        console.log(totalPrice);
+        toast.error(`คุณมีจำนวนเงินไม่เพียงพอให้สรุปยอด เงินที่เหลืออยู่:${totalPrice} THB`)
+      }
+      console.log(totalPrice, total);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   console.log(users);
   const row = [];
@@ -167,8 +179,8 @@ const ProductIncomeAll = () => {
                       THB
                     </p>
                     <p>
-                      หลักจากหักค่าทำเนียบแล้ว รายได้รวมของร้านค้า คงเหลือ :{" "}
-                      {users?.credit || (
+                      หลักจากหักค่าทำเนียบแล้วรายได้รวมของร้านค้า ยอดคงเหลือ :{" "}
+                      {total || (
                         <RotatingLines
                           strokeColor="grey"
                           strokeWidth="5"
@@ -179,24 +191,60 @@ const ProductIncomeAll = () => {
                       )}{" "}
                       THB
                     </p>
-                    <p>
-                      ยอดเงินที่สามารถถอนได้ คงเหลือ :{" "}
-                      {users?.credit || (
-                        <RotatingLines
-                          strokeColor="grey"
-                          strokeWidth="5"
-                          animationDuration="0.75"
-                          width="11"
-                          visible={true}
-                        />
-                      )}{" "}
-                      THB
-                    </p>
+                    {monney === 0 ? (
+                      <p>
+                        หลักจากหักค่าทำเนียบแล้ว ยอดคงเหลือ : โปรดสรุปยอดก่อน
+                      </p>
+                    ) : (
+                      <p>
+                        รายได้ที่สามารถถอนได้จริง คงเหลือ :{" "}
+                        {users?.credit === 0 ? (
+                          <> 0 THB</>
+                        ) : (
+                          `${users?.credit} THB`
+                        )}
+                      </p>
+                    )}
+                    {monney === 0 ? (
+                      <p>ยอดเงินที่สามารถถอนได้ คงเหลือ : โปรดสรุปยอดก่อน</p>
+                    ) : (
+                      <p>
+                        ยอดเงินที่สามารถถอนได้ คงเหลือ :{" "}
+                        {users?.credit || (
+                          <RotatingLines
+                            strokeColor="grey"
+                            strokeWidth="5"
+                            animationDuration="0.75"
+                            width="11"
+                            visible={true}
+                          />
+                        )}{" "}
+                        THB
+                      </p>
+                    )}
                   </div>
                   <div className="wi-out">
-                    <button onClick={setOpenWihraw.bind(this, true)}>
-                      แจ้งถอน
+                    <button
+                      className="button"
+                      onClick={() =>
+                        setMonney(1) || 
+                        UpdateCredit(availablePrice, total)
+                      }
+                    >
+                      สรุปยอด
                     </button>
+                    {users?.credit === 0 ? (
+                      <button disabled onClick={setOpenWihraw.bind(this, true)}>
+                        แจ้งถอน
+                      </button>
+                    ) : (
+                      <button
+                        className="button"
+                        onClick={setOpenWihraw.bind(this, true)}
+                      >
+                        แจ้งถอน
+                      </button>
+                    )}
                   </div>
                 </>
               ) : (

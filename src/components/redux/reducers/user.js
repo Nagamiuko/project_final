@@ -17,6 +17,18 @@ export const getUserDetail = createReducer(initialState, {
     state.isLoading = false;
     state.error = action.payload;
   },
+  // get withdram all of user
+  getWithdramAllUserRequest: (state) => {
+    state.isLoading = true;
+  },
+  getWithdramAllUserSuccess: (state, action) => {
+    state.isLoading = false;
+    state.userWithdram = action.payload;
+  },
+  getWithdramAllUserFailed: (state, action) => {
+    state.isLoading = false;
+    state.error = action.payload;
+  },
   
   clearErrors: (state) => {
    state.error = null;
