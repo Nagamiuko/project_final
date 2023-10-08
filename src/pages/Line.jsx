@@ -18,6 +18,7 @@ const Line = () => {
       dispatch({ type: "LOGIN_START", loading });
     try{
         const profile = await liff.getProfile()
+        console.log(profile);
         await axios.post(config.apiloginLineauth,profile).then((res)=>{
          dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
         }).catch(err => console.log(err));
