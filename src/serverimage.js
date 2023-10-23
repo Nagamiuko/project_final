@@ -1,0 +1,1 @@
+export const url = "http://13.212.116.177:4002/public/coverimage"

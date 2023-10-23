@@ -12,6 +12,7 @@ import config from "../../config.json";
 import Swal from "sweetalert2";
 import moment from "moment-timezone";
 import Load from "../alertshow/Load";
+import { url } from "../../serverimage";
 const WToon = ({
   DataChapterToon,
   DataToonChapterDetali,
@@ -147,7 +148,7 @@ const WToon = ({
                           ).map((imagechapter) => (
                             <img
                               key={imagechapter.imageNumber}
-                              src={`http://localhost:4002/public/coverimage/${imagechapter.image}`}
+                              src={`${url}/${imagechapter.image}`}
                               alt=""
                             />
                           ))}

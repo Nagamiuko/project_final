@@ -18,7 +18,7 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
   const navigator = useNavigate();
   const [dropchapter, setDropChapter] = useState(false);
   const [selectedImages, setSelectesImages] = useState([]);
-  const [imagefiles, setImg] = useState([]);
+  const [images, setImg] = useState([]);
   const [title_name, setTitlename] = useState();
   const [contentsNovel, setContentNovel] = useState();
   const [load, setLoad] = useState(false);
@@ -32,6 +32,24 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
     setImg(selectedFiles);
     setSelectesImages(imagesArray);
   };
+  // const onSelectFile = (evert) => {
+  //   const files = Array.from(evert.target.files);
+  //   setImg([]);
+
+  //   files.forEach((file) => {
+  //     const reader = new FileReader();
+  //     reader.onload = () => {
+  //       if (reader.readyState === 2) {
+  //         setImg((old) => [...old, reader.result]);
+  //       }
+  //     };
+  //     reader.readAsDataURL(file);
+  //   });
+  //   const imagesArray = files.map((file) => {
+  //     return URL.createObjectURL(file);
+  //   });
+  //   setSelectesImages(imagesArray);
+  // };
 
   const menuRef = useRef();
   window.addEventListener("click", (e) => {
@@ -49,13 +67,21 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
   };
   const handleSummit = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    for (let i = 0; i < imagefiles.length; i++) {
-      formData.append("imagechapter", imagefiles[i]);
-      console.log(imagefiles[i]);
+    // const DateFile = {
+    //   title_name: title_name,
+    //   contents: contentsNovel,
+    // };
+    // images.forEach((image) => {
+    //   newForm.set("images", image);
+    // });
+    const newForm = new FormData();
+
+    for (let i = 0; i < images.length; i++) {
+      newForm.append("imagechapter", images[i]);
+      console.log(images[i]);
     }
-    formData.append("contents", contentsNovel);
-    formData.append("title_name", title_name);
+    newForm.append("contents", contentsNovel);
+    newForm.append("title_name", title_name);
 
     const configsheaders = {
       headers: {
@@ -66,7 +92,7 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
       setLoad(true);
       const res = await axios.post(
         `${config.apiaddcartoonchapter}/${bookid}`,
-        formData,
+        newForm,
         configsheaders
       );
       Swl.fire({
@@ -112,8 +138,8 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
   // console.log(selectedImages);
   // console.log(imagefiles);
   // console.log(bookid);
-  console.log(DatatoonD);
-  console.log(contentsNovel);
+  // console.log(DatatoonD);
+  // console.log(contentsNovel);
 
   if (DatatoonD?.typebookAndnovel === "หนังสือการ์ตูน") {
     return (
@@ -210,16 +236,11 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
               </div>
               <div className="col-ct">
                 <div className="title">อัพโหลดภาพการ์ตูน</div>
-                <div
-                  className="col-box-img"
-                  onClick={() => document.querySelector(".input").click()}
-                  tabIndex={1}
-                >
+                <div className="col-box-img">
                   <input
                     type="file"
                     multiple
                     onChange={onSelectFile}
-                    hidden
                     className="input"
                     tabIndex={-1}
                   />
@@ -365,22 +386,22 @@ const AddCh = ({ DataToonChapter, DatatoonD, Loadings, setDataChapter }) => {
                   height="400"
                   onChange={setText}
                   setOptions={{
-                    buttonList:[
+                    buttonList: [
                       [
-                       "fontSize",
-                       "bold",
-                       "underline",
-                       "italic",
-                       "strike",
-                       "removeFormat",
-                       "fontColor",
-                       "hiliteColor",
-                       "align",
-                       "preview",
-                       "print",
-                       "textStyle",
-                      ]
-                    ]
+                        "fontSize",
+                        "bold",
+                        "underline",
+                        "italic",
+                        "strike",
+                        "removeFormat",
+                        "fontColor",
+                        "hiliteColor",
+                        "align",
+                        "preview",
+                        "print",
+                        "textStyle",
+                      ],
+                    ],
                   }}
                 />
               </div>
