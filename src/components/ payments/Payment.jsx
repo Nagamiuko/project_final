@@ -44,6 +44,7 @@ const Payment = () => {
     user: user && user,
     totalPrice: orderData?.TotalPaice,
     status:"Delivered",
+    informationPayment:orderData?.informationPayment,
   };
   const AddMyBook = {
     cart: orderData?.cart,

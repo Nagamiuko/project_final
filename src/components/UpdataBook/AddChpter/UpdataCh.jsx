@@ -14,6 +14,7 @@ import axios from "axios";
 import SunEditor from "suneditor-react";
 import "suneditor/dist/css/suneditor.min.css";
 import Load from "../../alertshow/Load";
+import { url } from "../../../serverimage";
 
 const UpdataChapter = ({ DataToonChapter, DatatoonD, Loadings ,setDataChapter }) => {
   const {chapteid } = useParams();
@@ -288,7 +289,7 @@ const UpdataChapter = ({ DataToonChapter, DatatoonD, Loadings ,setDataChapter })
                       {dataimage && dataimage.sort((a, b) => a.imageNumber > b.imageNumber ? 1 : -1).map((daimage, keys) => (
                           <div className="img-s-box">
                             <button onClick={()=>handDeleteImage(daimage)}>ลบ</button>
-                            <img src={`http://localhost:4002/public/coverimage/${daimage?.image}` || excover} alt=""/>
+                            <img src={`${url}${daimage?.image}` || excover} alt=""/>
                             {keys + 1}
                           </div>
                        ))

@@ -7,6 +7,8 @@ import "./Login.css";
 import Swal from "sweetalert2";
 import Load from "../alertshow/Load";
 import liff from "@line/liff";
+import { urladmin } from "../../serverimage";
+
 const Login = ({ setLoginpopup }) => {
   const { loading, dispatch } = useContext(AuthContext);
   const [InText, setInText] = useState({
@@ -101,7 +103,7 @@ const Login = ({ setLoginpopup }) => {
               <button onClick={handLogin}>ล็อกอินเข้าสู่ระบบ</button>
             </div>
             <div className="foot-p">
-              <Link className="p-font font-color-t">ลืมรหัสผ่าน</Link>
+              <a href={urladmin} target="_black" className="p-font font-color-t">ล็อกอินผู้ดูแล</a>
             </div>
 
             <div className="foot-t">

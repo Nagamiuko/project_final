@@ -6,12 +6,9 @@ import Lis from './ListTNST/Lis'
 const SreachTN = ({DataToon , Loading}) => {
    const [dropbox , setDropBox] = useState(false) 
    const [query , setQuery] = useState()
-   const [checked , setChecked]= useState('ทั้งหมด')
+   const [checked , setChecked]= useState("ทั้งหมด")
    const [checked1 , setChecked1]= useState('ทั่วไป')
    const [checked2 , setChecked2]= useState('ทั้งหมด')
-   console.log(checked);
-   console.log(checked1);
-   console.log(checked2);
    
    const isChecked = (value) => value === checked;
    const onSelect = ({target: {value} }) => {

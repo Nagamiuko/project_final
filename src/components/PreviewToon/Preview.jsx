@@ -31,7 +31,8 @@ const Preview = ({
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state.cart);
   const { user } = useContext(AuthContext);
-
+  let UrlNoFIle =
+    "https://res.cloudinary.com/dz4xrddoy/image/upload/v1698134137/NoFile/z6mmgokrwdhb11tjknm5.pdf";
   useEffect(() => {
     if (wishlist && wishlist.find((i) => i._id === DatatoonD._id)) {
       setClick(true);
@@ -137,16 +138,13 @@ const Preview = ({
                   <div className="title-n-n">{DatatoonD?.title}</div>
                   <div className="t-name-s">
                     โดย :{" "}
-                    {DatatoonD.mangauser?.namedisplay || DatatoonD.mangauser?.fullname}
+                    {DatatoonD.mangauser?.namedisplay ||
+                      DatatoonD.mangauser?.fullname}
                   </div>
                   <div className="t-r">
                     {DatatoonD?.category + "/" + DatatoonD?.category_main}
                   </div>
                   <div className="box-menu-tool">
-                    <div className="view-title-row">
-                      <div className="view-t">👁️ ยอดวิว</div>
-                      <div className="view-u">{`10`}</div>
-                    </div>
                     <div className="view-title-row">
                       <div className="view-t">📜 จำนวนตอน</div>
                       <div className="view-u">{NumberChapter}</div>
@@ -176,9 +174,9 @@ const Preview = ({
                     </div>
                     {DatatoonD?.price_of_free !== 0 ? (
                       <div className="view-title-row">
-                        <Link to={`/ViewToon/${DatatoonD._id}`}>
+                        <a target="_black_new_page" href={DatatoonD?.book_pdf?.book_pdf_try || UrlNoFIle} >
                           <div className="btn-t">{`ทดลองอ่าน`}</div>
-                        </Link>
+                        </a>
                       </div>
                     ) : (
                       <div className="view-title-row">
@@ -216,7 +214,7 @@ const Preview = ({
             <div className="content-box">
               <div className="box-top-d">
                 {DatatoonD?.typebook === "เล่มเดี่ยว" ? (
-                  ""
+                   <div className="try-book">"สำหลับทดลองอ่านสามารถ คลิกที่ปุ่มทดลองอ่าน"</div>
                 ) : (
                   <div className="content-chapter-t">
                     <div
@@ -296,7 +294,10 @@ const Preview = ({
                         alt=""
                       />
                     </div>
-                    <h4 className="name-p">{data?.mangauser?.namedisplay || data?.mangauser?.fullname}</h4>
+                    <h4 className="name-p">
+                      {data?.mangauser?.namedisplay ||
+                        data?.mangauser?.fullname}
+                    </h4>
                     <div className="show-re-view">
                       <div className="row-list-cview">
                         <div className="textview">{data?.textreview}</div>

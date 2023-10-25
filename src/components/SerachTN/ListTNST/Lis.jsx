@@ -32,7 +32,7 @@ const Lis = ({DataT , Load, Search , SearchCT , SearchRT , SearchBN}) => {
                        {dat?.category+' / '+dat?.category_main}
                      </div>
                       <div className="title-n-b"  style={{fontSize:'12px'}}>
-                        {'แปลโดย '+dat?.mangauser?.fullname}
+                        {'ลงหนังสือโดย: '+dat?.mangauser?.fullname}
                        </div>
                       <div className="title-n-b"  style={{fontSize:'12px'}}>
                         {':'}
@@ -77,7 +77,7 @@ const Lis = ({DataT , Load, Search , SearchCT , SearchRT , SearchBN}) => {
                   {dat?.category+' / '+dat?.category_main}
                 </div>
                  <div className="title-n-b"  style={{fontSize:'12px'}}>
-                   {'แปลโดย '+dat?.mangauser?.fullname}
+                   {'ลงหนังสือโดย:  '+dat?.mangauser?.fullname}
                   </div>
                  <div className="title-n-b"  style={{fontSize:'12px'}}>
                    {':'}
@@ -121,7 +121,7 @@ else if(SearchBN === 'ทั้งหมด'){
                   {dat?.category+' / '+dat?.category_main}
                 </div>
                  <div className="title-n-b"  style={{fontSize:'12px'}}>
-                   {'แปลโดย '+dat?.mangauser?.fullname}
+                   {'ลงหนังสือโดย:  '+dat?.mangauser?.fullname}
                   </div>
                  <div className="title-n-b"  style={{fontSize:'12px'}}>
                    {':'}

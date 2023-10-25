@@ -20,7 +20,6 @@ const BarCharts = ({data , title , qty}) => {
           <Tooltip />
           <Legend />
           <Bar dataKey="Total" fill="#8884d8" />
-          {/* <Bar dataKey="Total" fill="#82ca9d" /> */}
         </BarChart>
       </ResponsiveContainer>
    </>

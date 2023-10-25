@@ -67,6 +67,11 @@ div.box-b-b{
    backdrop-filter: blur(0.5px);
    
 }
+.box-top-d .try-book{
+   padding: 10px ;
+   text-align: center;
+   width: 100%;
+}
 .img-box {
    max-width: 122px;
    height: 160px;
