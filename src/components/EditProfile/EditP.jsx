@@ -17,7 +17,7 @@ const EditP = () => {
   const [fullname, setName] = useState([user?.fullname]);
   const [displayname, setNameDisplay] = useState([user?.namedisplay]);
   const [mail, setMail] = useState([user?.email]);
-  const [gender, setGender] = useState(user?.sex);
+  const [gender, setGender] = useState(user?.sex || "");
   const [fileCover, setFileCover] = useState([]);
   const [image, setFileImage] = useState("");
   const [loading, setLoad] = useState(false);

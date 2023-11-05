@@ -34,9 +34,25 @@ const DetailOr = () => {
         <div className="row-detail-or">
           <div className="detail-or">
             <h3>
-              เราได้รับคำสั่งซื้อหมายเลข {receiptDetail?._id} จากคุณแล้ว
-              ทางเราจะแจ้งร้านค้าให้จัดส่งสินค้าให้กับคุณโดยเร็วที่สุด
+              เราได้รับคำสั่งซื้อหมายเลข {receiptDetail?._id} จากคุณ{" "}
+              {receiptDetail?.user?.fullname}
             </h3>
+          </div>
+        </div>
+        <div className="border "></div>
+        <div className="row-detail-or">
+          <div className="detail-or">
+            <h3>
+              ข้อมูลติดต่อ
+            </h3> 
+            <div className="detail-order-or mt-10">
+              <p>ชื่อผู้สั่งชื้อ: {receiptDetail?.shippingAddress?.nameaddre}</p>
+              <p>เบอร์โทรศัทพ์: {receiptDetail?.shippingAddress?.telss}</p>
+              <p>อีเมล: {receiptDetail?.user?.email}</p>
+            </div>
+            <div className="detail-order-or mt-10">
+              <p>ที่อยู่ผู้ชื้อ: {receiptDetail?.shippingAddress?.address} {receiptDetail?.shippingAddress?.distrct} {receiptDetail?.shippingAddress?.dists} {receiptDetail?.shippingAddress?.province} {receiptDetail?.shippingAddress?.postalcode}</p>
+            </div>
           </div>
         </div>
         <div className="border "></div>

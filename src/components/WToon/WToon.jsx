@@ -207,7 +207,7 @@ const WToon = ({
                         </div>
                       </div>
                     </div>
-                    <div className="btn-v-re">ตอบกลับ</div>
+                    {/* <div className="btn-v-re">ตอบกลับ</div> */}
                   </div>
                 ))}
                 {/* <textarea type="text" placeholder='ข้อความ'
@@ -358,7 +358,7 @@ const WToon = ({
                         </div>
                       </div>
                     </div>
-                    <div className="btn-v-re">ตอบกลับ</div>
+                    {/* <div className="btn-v-re">ตอบกลับ</div> */}
                   </div>
                 ))}
                 {/* <textarea type="text" placeholder='ข้อความ'

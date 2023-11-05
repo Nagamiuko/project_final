@@ -37,6 +37,8 @@ const ProductIncomeAll = () => {
   const [monney, setMonney] = useState(users && users.credit);
   const [monney_total, setMonneyTaotal] = useState(0);
 
+  const totalsell =
+    dataprice && dataprice.reduce((acc, item) => acc + item, 0);
   const totalPriceBook =
     dataprice && dataprice.reduce((acc, item) => acc + item.totalPrice, 0);
   const totalWithCredit =
@@ -44,7 +46,7 @@ const ProductIncomeAll = () => {
   const serviceCharge = totalPriceBook * 0.1;
   const total = totalPriceBook - serviceCharge.toFixed(2);
   let availablePrice = total - totalWithCredit;
-  console.log(availablePrice);
+  console.log(totalsell);
   useEffect(() => {
     dispatch(getOrdersAllOfShop(user._id));
     dispatch(getCreditOfUser(user._id));
@@ -54,17 +56,21 @@ const ProductIncomeAll = () => {
       orderoneshop.filter((item) => item.status === "Delivered");
     setDataPrice(orderData);
   }, [dispatch, user._id]);
+  
 
   const UpdateCredit = async (totalPrice, total) => {
     try {
-      if(totalPrice > 0){
+      if (totalPrice > 0) {
         await axios.put(`${config.apiUserUpdateCredit}/${user._id}`, {
           availablePrice: totalPrice,
           totalMonneyShop: total,
+          sellbook: orderoneshop?.length,
         });
-      }else{
+      } else {
         console.log(totalPrice);
-        toast.error(`คุณมีจำนวนเงินไม่เพียงพอให้สรุปยอด เงินที่เหลืออยู่:${totalPrice} THB`)
+        toast.error(
+          `คุณมีจำนวนเงินไม่เพียงพอให้สรุปยอด เงินที่เหลืออยู่:${totalPrice} THB`
+        );
       }
       console.log(totalPrice, total);
     } catch (err) {
@@ -114,15 +120,16 @@ const ProductIncomeAll = () => {
             </div>
             <div className="table-order-shop">
               <TableContainer component={Paper} className="table">
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table sx={{ minWidth: 670 }} aria-label="simple table">
                   <TableHead>
                     <TableRow>
                       <TableCell className="tableCell">
                         หมายเลขสั่งชื้อ #
                       </TableCell>
-                      <TableCell className="tableCell">สภานะชำระเงิน</TableCell>
+                      <TableCell className="tableCell">รายการ</TableCell>
                       <TableCell className="tableCell">จำนวน</TableCell>
                       <TableCell className="tableCell">ราคา</TableCell>
+                      <TableCell className="tableCell">สถานะชำระ</TableCell>
                       <TableCell className="tableCell">วันที่</TableCell>
                       <TableCell className="tableCell">สรุปรายการ</TableCell>
                     </TableRow>
@@ -132,15 +139,18 @@ const ProductIncomeAll = () => {
                       <TableRow key={row._id}>
                         <TableCell className="tableCell">{row._id}</TableCell>
                         <TableCell className="tableCell">
-                          <span className={`status succeeded`}>
-                            {row?.paymentInfo?.status}
-                          </span>
+                          {row?.cart?.title}
                         </TableCell>
                         <TableCell className="tableCell">
                           {row?.cart?.qty}
                         </TableCell>
                         <TableCell className="tableCell">
-                          {row?.cart?.price_of_free}
+                          {row?.totalPrice}
+                        </TableCell>
+                        <TableCell className="tableCell">
+                          <span className={`status succeeded`}>
+                            {row?.paymentInfo?.status}
+                          </span>
                         </TableCell>
                         <TableCell className="tableCell">
                           {moment(row?.updatedAt).format("DD ,MMM ,YYYY")}
@@ -227,8 +237,7 @@ const ProductIncomeAll = () => {
                     <button
                       className="button"
                       onClick={() =>
-                        setMonney(1) || 
-                        UpdateCredit(availablePrice, total)
+                        setMonney(1) || UpdateCredit(availablePrice, total)
                       }
                     >
                       สรุปยอด

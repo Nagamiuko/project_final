@@ -132,10 +132,10 @@ const Menufoot = () => {
               <Link to="/CarToon">การ์ตูน</Link>
             </li>
             <li>
-              <Link to="/Novels">นิยายแต่ง</Link>
+              <Link  to="/CarToon">การ์ตูนแฟนคลับแปล</Link>
             </li>
             <li>
-              <Link  to="/CarToon">การ์ตูนแฟนคลับแปล</Link>
+              <Link to="/MyFavorite">หนังสือที่ชื่นชอบ</Link>
             </li>
           </ul>
           {user == null ? (

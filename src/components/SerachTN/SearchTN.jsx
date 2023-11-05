@@ -51,7 +51,7 @@ const SreachTN = ({DataToon , Loading}) => {
                                   type="radio" 
                                   name='typeBN'
                                   value='นิยายแปล'
-                                  checked ={isChecked('นิยายแปล')}
+                                  checked ={isChecked('นิยาย')}
                                   id='novel'
                                   onChange={onSelect}
                                 />
@@ -290,58 +290,58 @@ const SreachTN = ({DataToon , Loading}) => {
                                 />
                             <span className='checkmark'></span>
                            </label>
-                           <label className='keyword-container' htmlFor="CT11"> สยองขวัญ
+                           <label className='keyword-container' htmlFor="CT12"> สยองขวัญ
                               <input 
                                   type="radio" 
                                   name='typeCT'
                                   value='สยองขวัญ'
                                   checked ={isChecked3('สยองขวัญ')}
                                   onChange={onSelect3}
-                                  id='CT11'
+                                  id='CT12'
                                 />
                             <span className='checkmark'></span>
                            </label>
-                           <label className='keyword-container' htmlFor="CT11"> ย้อนยุค
+                           <label className='keyword-container' htmlFor="CT13"> ย้อนยุค
                               <input 
                                   type="radio" 
                                   name='typeCT'
                                   value='ย้อนยุค'
                                   checked ={isChecked3('ย้อนยุค')}
                                   onChange={onSelect3}
-                                  id='CT11'
+                                  id='CT13'
                                 />
                             <span className='checkmark'></span>
                            </label>
-                           <label className='keyword-container' htmlFor="CT11"> ระบบ
+                           <label className='keyword-container' htmlFor="CT14"> ระบบ
                               <input 
                                   type="radio" 
                                   name='typeCT'
                                   value='ระบบ'
                                   checked ={isChecked3('ระบบ')}
                                   onChange={onSelect3}
-                                  id='CT11'
+                                  id='CT14'
                                 />
                             <span className='checkmark'></span>
                            </label>
-                           <label className='keyword-container' htmlFor="CT11"> เกมส์ออนไลน์
+                           <label className='keyword-container' htmlFor="CT15"> เกมส์ออนไลน์
                               <input 
                                   type="radio" 
                                   name='typeCT'
                                   value='เกมส์ออนไลน์'
                                   checked ={isChecked3('เกมส์ออนไลน์')}
                                   onChange={onSelect3}
-                                  id='CT11'
+                                  id='CT15'
                                 />
                             <span className='checkmark'></span>
                            </label>
-                           <label className='keyword-container' htmlFor="CT11"> แอคชั่น
+                           <label className='keyword-container' htmlFor="CT16"> แอคชั่น
                               <input 
                                   type="radio" 
                                   name='typeCT'
                                   value='แอคชั่น'
                                   checked ={isChecked3('แอคชั่น')}
                                   onChange={onSelect3}
-                                  id='CT11'
+                                  id='CT16'
                                 />
                             <span className='checkmark'></span>
                            </label>

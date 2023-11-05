@@ -92,10 +92,10 @@ const View = ({ DataToonChapter, DatatoonD, userID, DataComment , setClick ,clic
                 </div>
                 <div className="t-r">{DatatoonD.category_main}</div>
                 <div className="box-v-d-menu-tool">
-                  <div className="view-title-row">
+                  {/* <div className="view-title-row">
                     <div className="view-t">👁️ ยอดวิว</div>
                     <div className="view-u">{`11`}</div>
-                  </div>
+                  </div> */}
                   <div className="view-title-row">
                     <div className="view-t">📜 จำนวนตอน</div>
                     <div className="view-u">{i}</div>
@@ -232,7 +232,7 @@ const View = ({ DataToonChapter, DatatoonD, userID, DataComment , setClick ,clic
                     </div>
                   </div>
                 </div>
-                <div className="btn-v-re">ตอบกลับ</div>
+                {/* <div className="btn-v-re"></div> */}
               </div>
             ))}
             {/* <textarea type="text" placeholder='ข้อความ'

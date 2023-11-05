@@ -311,7 +311,7 @@ const Preview = ({
                       </div>
                     </div>
                   </div>
-                  <div className="btn-v-re">ตอบกลับ</div>
+                  {/* <div className="btn-v-re"></div> */}
                 </div>
               ))}
               {/* <textarea type="text" placeholder='ข้อความ'

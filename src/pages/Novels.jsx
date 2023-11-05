@@ -27,10 +27,10 @@ const Novels = () => {
                   <LogoList/>
               </div>
               <div className="list-toon-top">
-                 <ListToon DataToon={datanovelAll} Loadings={loadings} TileTap={'นิยายยอดฮิด'}/>
+                 <ListToon DataToon={datanovelAll} Loadings={loadings} TileTap={'นิยายมาใหม่'}/>
               </div>
               <div className="list-toon-top">
-                 <ListToon DataToon={datanovelTs} Loadings={loadings} TileTap={'นิยายมาใหม่'}/>
+                 <ListToon DataToon={datanovelTs} Loadings={loadings} TileTap={'นิยาย'}/>
               </div>
          </div>
       </section>

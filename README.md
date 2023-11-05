@@ -2,17 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+ทำการดาวน์โหลดไฟล์ และ แตกไฟล์ เมื่อทำการแตกไฟล์สำเร็จ จะพบ กับโฟลเดอร์ ตัวโปรแกรม `ชื่อโฟลเดอร์ไฟล์ว่า myproject2` \
+ทำการเปิด `terminal` ใน  directory โปรแกรมใน  ทำการติดตั้ง Node JS \
+โดยใช้คำสั่ง `npm i` or `yarn` แล้วแต่เคร่ื่องของท่านติดตั้งไว้
 
 In the project directory, you can run:
 
+### เริ่มระบบด้วยคำสั่ง
+
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+เริ่มต้นระบบในโหมดนักพัฒนา\
+เปิดทดสอบ: [http://localhost:3000](http://localhost:3000) ในเว็บบราวเซอร์.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ระบบจะโหลดซ้ำเมื่อคุณทำการเปลี่ยนแปลง\
+คุณอาจเห็นข้อผิดพลาดของคุณในคอนโซลด้วยใน `Terminal` ใน Code Editor
 
 ### `npm test`
 
@@ -21,50 +25,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+สร้างแอปสำหรับการผลิตไปยังโฟลเดอร์ `build`\
+มันรวม React ในโหมดการผลิตอย่างถูกต้องและปรับโครงสร้างให้เหมาะสมเพื่อประสิทธิภาพที่ดีที่สุด\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+สามารถนำ `Folder build` ไปใช้ Deploy on Server Service ได้เลยครับ
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+สามารถแก้ไขไฟล์ `API` ได้ที่ `folder > src > config.json` ในกรณีที่  Run Node Service API ที่ไม่ใช้ Port : 4002  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

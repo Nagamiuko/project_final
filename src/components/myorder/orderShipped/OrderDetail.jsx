@@ -56,7 +56,7 @@ const OrderDetail = () => {
                 </div>
                 <div className="detail-order-book">
                   <label>หนังสือ</label>
-                  <p>{data?.cart?.title}</p>
+                  <p>{data?.cart?.title} (อีบุ๊ค) x 1 </p>
                 </div>
                 <div className="total-book">
                   <label>Total</label>

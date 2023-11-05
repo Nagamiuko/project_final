@@ -110,6 +110,14 @@ const ReceiptDetail = () => {
               <div className="list-receipt-detail flex-start">
                 <div className="detail-order-book">
                   <div>
+                    <label>ข้อมูลติดต่อ</label>
+                    <p>ชื่อ : {receiptDetail?.shippingAddress?.nameaddre}</p>
+                    <p>เบอร์โทรศัทพ์ : {receiptDetail?.shippingAddress?.telss}</p>
+                    <p>ที่อยู่ : {receiptDetail?.shippingAddress?.address} {receiptDetail?.shippingAddress?.distrct} {receiptDetail?.shippingAddress?.dists} {receiptDetail?.shippingAddress?.province} {receiptDetail?.shippingAddress?.postalcode}</p>
+                  </div>
+                </div>
+                <div className="detail-order-book">
+                  <div>
                     <label>ข้อมูลการชำระเงิน</label>
                     <p>{receiptDetail?.paymentInfo?.type}</p>
                   </div>
@@ -119,7 +127,7 @@ const ReceiptDetail = () => {
               <div className="list-receipt-detail flex-between">
                 <div className="w-j-b-80">
                   <label>รายการ</label>
-                  <p>{receiptDetail?.cart?.title}</p>
+                  <p>{receiptDetail?.cart?.title} (อีบุ๊ค) x 1 </p>
                   <p>ค่าจัดส่ง [{`ไม่มีค่าจัดส่ง`}]</p>
                 </div>
                 <div className="w-j-b row-list">

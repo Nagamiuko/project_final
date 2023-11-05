@@ -38,7 +38,7 @@ const ListToon = ({ DataToon, Loadings, TileTap }) => {
               {dtoon?.category + "/" + dtoon?.category_main}
             </div>
             <span className="flex-n" onClick={(e) => e.stopPropagation()}>
-              <p>👁️10 </p>
+              <p></p>
               {/* {`dtoon.views`} */}
              {dtoon?.price_of_free !== 0 ? (
               <button onClick={setOpenCart.bind(this, true)}>

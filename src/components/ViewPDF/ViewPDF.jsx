@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Worker } from "@react-pdf-viewer/core";
 import { Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -10,6 +10,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationData from "../../assets/icon/AnimationNoData.json";
 import "./pdf.css";
+import Load from "../alertshow/Load";
 const ViewPDF = () => {
   const [bookpdf] = useSearchParams();
   const bookpdfid = bookpdf.get("bookpdf");
@@ -20,6 +21,8 @@ const ViewPDF = () => {
   const { orderone } = useSelector((state) => state.order);
   const dispatch = useDispatch();
   const { user } = useContext(AuthContext);
+
+  const [error, setError] = useState();
   useEffect(() => {
     dispatch(getOneProductBook(bookpdfid));
     dispatch(getOrdersOneOfUser(statusid));
@@ -29,20 +32,32 @@ const ViewPDF = () => {
   if (user?._id === orderone?.user?._id) {
     try {
       if (orderone?.paymentInfo?.status === "succeeded") {
-        return (
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-            <div className="book-pdf">
-              <Viewer
-                fileUrl={bookonepayment.book_pdf.book_pdf_full || UrlNoFIle}
-              />
-            </div>
-          </Worker>
-        );
+          return (
+            <> {isLoading ? <Load/>:
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+              <div className="book-pdf">
+                <Viewer
+                fileUrl={bookonepayment?.book_pdf?.book_pdf_full || UrlNoFIle}
+                />
+              </div>
+            </Worker>
+            }
+          </>
+          );
       } else {
         return <p>No Payments</p>;
       }
     } catch (err) {
-      console.log(err);
+      setError(err);
+      return (
+        <>
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+            <div className="book-pdf">
+              <Viewer fileUrl={UrlNoFIle} />
+            </div>
+          </Worker>
+        </>
+      );
     }
   } else {
     return (
@@ -51,7 +66,7 @@ const ViewPDF = () => {
           <Lottie animationData={animationData} loop={true} autoPlay={true} />
           <h4>คุณไม่มีสิทธิ์เข้าถึงไฟล์นี้ !</h4>
           <div>
-            <Link>กลับหน้าหลัก</Link>
+            <Link to='/bookshelf'>กลับหน้าหลัก</Link>
           </div>
         </div>
       </div>

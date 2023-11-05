@@ -46,9 +46,12 @@ const CheckoutOrder = () => {
     if (
       address === "" ||
       distrct === "" ||
-      dists === null ||
+      dists === "" ||
       province === "" ||
-      postalcode === ""
+      postalcode === "" ||
+      name === "" ||
+      email === "" || 
+      tel === ""
     ) {
       toast.error("Please choose your delivery address!")
     } else {
