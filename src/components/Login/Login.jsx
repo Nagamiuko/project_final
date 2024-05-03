@@ -102,10 +102,7 @@ const Login = ({ setLoginpopup }) => {
             <div className="btn-log ">
               <button onClick={handLogin}>ล็อกอินเข้าสู่ระบบ</button>
             </div>
-            <div className="foot-p">
-              <a href={urladmin} target="_black" className="p-font font-color-t">ล็อกอินผู้ดูแล</a>
-            </div>
-
+    
             <div className="foot-t">
               <button className="btn-n" onClick={handledLoginLine}>
                 เข้าสู่ระบบด้วย Line
