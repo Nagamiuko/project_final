@@ -170,7 +170,7 @@ const Router = () => {
         <Route path="/CarToon" element={<Cartoon />} />
         <Route path="/Novels" element={<Novels />} />
         <Route path="/line" element={<Line />} />
-        {/* <Route path="/*" element={<UserNull />} /> */}
+        <Route path="/*" element={<UserNull />} /> 
       </Routes>
     </BrowserRouter>
   );
